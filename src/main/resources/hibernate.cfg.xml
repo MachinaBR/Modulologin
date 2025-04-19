@@ -13,10 +13,10 @@
 
         <!-- 3) URL de conexión -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/tu_base_de_datos?useSSL=false&amp;serverTimezone=UTC
+            jdbc:mysql://localhost:3306/login_table?useSSL=false&amp;serverTimezone=UTC
         </property>
-        <property name="hibernate.connection.username">TU_USUARIO</property>
-        <property name="hibernate.connection.password">TU_CONTRASEÑA</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">12345</property>
 
         <!-- 4) Mostrar SQL en consola -->
         <property name="hibernate.show_sql">true</property>
