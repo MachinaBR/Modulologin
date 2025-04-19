@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1b1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: #122c34;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 380px;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: 31%; 
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: url('../imagenes/coco.png') no-repeat center;
+    background-size: contain;
+    background-position: center bottom; 
+    opacity: 0.2; 
+    z-index: 0;
+}
+.avatar img {
+    width: 250px;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 50px;
+
+}
+
+.input-group1 {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 40px;
+
+}
+
+
+
+.input-group .icon {
+    width: 25px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-group {
+    padding-right: 3rem; /* igual que .input-group1 */
+}
+
+
+.input-group input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 12px 40px 12px 50px; /* ↑ Igual que el de contraseña */
+    outline: none;
+}
+
+.input-group1 .icon {
+    width: 25px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-group1 input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 12px 40px 12px 60px;
+    outline: none;
+    
+    
+}
+/* icono del candado*/
+.input-group1 .icon {
+    width: 25px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.remember {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+button {
+    background: lime;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover {
+    background: green;
+}
+
+.captcha {
+    margin: 20px 0;
+    color: white;
+    font-size: 16px;
+}
+
+.forgot-password {
+    color: lime;
+    font-size: 16px;
+    display: block;
+    margin-top: 35px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.userico {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+
+.candadoico {
+    .candadoico {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        filter: brightness(0) invert(1);
+        z-index: 10;
+}
+    }
+
+    .input-group,
+    .input-group1 {
+        position: relative; /* importante para posicionar el icono dentro */
+    }
+
+    .separator {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 5px auto;
+    opacity: 0.8;
+}
+
+button, input, label {
+    position: relative;
+    z-index: 10; 
+}
+
+
+.input-group1 {
+    padding-right: 3rem;
+}
+
+
+.toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 11;
+}
+
+/* noinspection CssInvalidPseudoSelector */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    display: none !important;
+}
+/* noinspection CssInvalidPseudoSelector */
+input[type="password"]::-webkit-input-decoration {
+    display: none;
+}

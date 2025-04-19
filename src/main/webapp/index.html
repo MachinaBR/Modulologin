@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Custom.css">
+
 </head>
 <body>
 
+    <div class="login-container">
+        <div class="avatar">
+            <img src="imagenes/iconogrande.png" alt="Avatar">
+        </div>
+        <div class="separator"></div>
+
+        <form action="login" method="post">
+            <div class="input-group">
+                <label for="username"><img src="imagenes/user.jpg" class="icon"></label>
+                <input type="text" id="username" name="username" placeholder="Nombre">
+            </div>
+            <div class="input-group1">
+                <label for="password"><img src="imagenes/candado.jpg" class="candadoico icon">
+                </label>
+                <input type="password" id="password" name="password" placeholder="Contraseña">
+            </div>
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Recordar contraseña</label>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+            <div class="captcha">
+                <input type="checkbox" id="captcha">
+                <label for="captcha">I'm not a robot</label>
+            </div>
+            <a href="#" class="forgot-password">Olvidaste tu contraseña</a>
+        </form>
+    </div>
+    <script src="js/codigo.js"></script>
 </body>
 </html>
