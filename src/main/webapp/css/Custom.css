@@ -228,3 +228,35 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 input[type="password"]::-webkit-input-decoration {
     display: none;
 }
+
+/* borde rojo al input en error */
+
+
+/* mensaje de error justo debajo */
+
+
+.input-group.has-error {
+    border: 2px solid #ed4245 !important;
+}
+
+/* 2) Ajusta el padding interior para que el borde no choque con el contenido */
+.input-group.has-error {
+    padding: 8px;      /* o el padding que necesites para igualar */
+    /* recuerda mantener tu border-radius si lo tienes: */
+    border-radius: 8px;
+}
+
+/* 3) El mensaje justo debajo, ancho completo */
+.error-message {
+    display: block;
+    color: #ed4245;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align-last: right;
+    padding-left: 40px; /* desplaza un poco, para que no choque con el icono */
+}
+
+/* 4) Opcional: si quieres que el input dentro quede full-width */
+.input-group.has-error input {
+    width: 100%;
+}

@@ -26,18 +26,20 @@ public class LoginServlet extends HttpServlet {
         Usuario u = usuarioDAO.findByUsername(user);
 
         // 3) Comprobar la contraseña
-        boolean valid = u != null
-                && u.getContrasena() != null
-                && u.getContrasena().trim().equals(pass.trim());
-
-        // 4) Responder
-        resp.setContentType("text/html;charset=UTF-8");
-        if (valid) {
-            // Login correcto: redirige a tu dashboard
-            resp.sendRedirect("dashboard.html");
-        } else {
-            // Login fallido: muestra mensaje de error
-            resp.getWriter().write("<h1>Usuario o contraseña incorrectos</h1>");
+        if (u == null) {
+            req.setAttribute("userError", "Usuario no encontrado");
+            req.setAttribute("usernameValue", user);
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            return;
         }
+        // 2) Contraseña mal
+        if (!u.getContrasena().trim().equals(pass.trim())) {
+            req.setAttribute("passError", "Contraseña incorrecta");
+            req.setAttribute("usernameValue", user);
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            return;
+        }
+        resp.sendRedirect(req.getContextPath() + "/dashboard.html");
+
     }
 }
